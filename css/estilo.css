@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+:root {
+    --papel: #DDD6BC;
+    --papel-claro: #F3EEDD;
+    --fundo: #FBF8EE;
+    --texto-p: #20281E;
+    --texto-outro: #2D332F;
+    --texto-outro2: #5B6355;
+    --verde-claro: #40916c;
+    --v-semi: #1E4A34;
+    --v-escuro: #1A3621;
+    --verde-outro: #233327;
+    --azul: #2E5FA3;
+    --vermelho: #B23B2E;
+    --amarelo: #e7df4b;
+    --marrom: #7A5230;
+    --creme: #F5F3E7;
+}
+
+/* Página de Login */
+body {
+    display: flex;
+    background-color: var(--papel-claro);
+    font-family: 'Google Sans Flex';
+    margin: 0px;
+}
+
+#b-index {
+    margin: 0px;
+}
+
+main {
+    margin: auto;
+}
+
+#p-lateral {
+    background-color: var(--v-semi);
+    color: white;
+    width: 637px;
+    height: 948px;
+}
+
+#login-card {
+    text-align: center;
+    border-radius: 2%;
+    background-color: var(--fundo);
+    width: 400px;
+    margin: auto;
+    box-shadow: 0px 0px 8px 0px var(--papel);
+}
+
+input {
+    background-color: var(--papel-claro);
+    border: 2px solid;
+    border-radius: 6px;
+    border-color: var(--papel);
+    height: 35px;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    background-color: var(--v-semi);
+    color: var(--creme);
+    height: 35px;
+    width: 350px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.texto {
+    color: var(--fundo);
+}
+
+form {
+    text-align: left;
+    margin-left: 22px;
+    padding: 5px;
+}
+
+.chk-box {
+    display: flex;
+    margin: 20px;
+}
+
+.box {
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+    margin-left: 7px;
+    margin-right: 10px;
+}
+
+.texto-rdp {
+    text-decoration: none;
+    color: var(--texto-outro);
+}
+
+.texto-rdp>span:hover {
+    text-decoration: underline;
+}
+
+
+/* Dashboard */
+
+#d-lateral {
+    width: 220px;
+    min-height: 100vh;
+    background: var(--v-semi);
+    color: var(--texto-claro);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    flex-shrink: 0;
+}
+
+#d-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#d-lateral nav a:hover,
+#d-lateral nav a:focus-visible {
+    background: var(--v-escuro);
+    border-left-color: var(--v-escuro);
+    outline: none;
+}
+
+#d-lateral nav a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: var(--texto-claro);
+    border-left: 3px solid transparent;
+    transition: background .15s ease, border-color .15s ease;
+}
+
+#principal {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--papel-claro);
+    padding: 0 24px 24px;
+    border-bottom: 1px solid var(--papel-claro);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.icone {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+.s-txt {
+    color: var(--papel);
+    font-size: 15px;
+}
+
+#dash {
+    margin: 0px;
+    padding: 0px;
+}
+
+#tela-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    max-height: max-content;
+    max-height: max-content;
+}
+
+.interno-a {
+    background-color: var(--fundo);
+    height: 166px;
+    width: 455px;
+    margin: 50px;
+    border-radius: 2%;
+}
+
+.interno-b {
+    background-color: var(--fundo);
+    margin: 30px 80px 20px 50px;
+    height: 550px;
+    width: 615px;
+    border-radius: 2%;
+}
+
+.interno-c {
+    background-color: var(--fundo);
+    margin: 30px 80px 0px 0px;
+    height: 400px;
+    width: 456px;
+    border-radius: 2%;
+
+}
+
+.d-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.d-dropdown summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--v-escuro);
+    color: var(--creme);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.d-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 200px;
+    background: var(--fundo);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(27, 67, 50, 0.18);
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    display: none;
+}
+
+.d-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--texto-p);
+    font-size: 0.92rem;
+}
+
+.d-menu li a:hover {
+    background: var(--verde-claro);
+}
+
+.d-menu .icone {
+    width: 18px;
+    height: 18px;
+}
+
+.d-menu .sair {
+    color: var(--v-escuro);
+}
+
+.d-dropdown:hover .d-menu {
+    display: block;
+}
+
+/* Perfil */
+
+.perfil {
+    background: var(--creme);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px #1b43321f;
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+}
+
+.perfil-topo {
+    background: var(--verde-900);
+    color: var(--texto-claro);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--verde-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--v-escuro);
+}
+
+.perfil-nome {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.perfil-email {
+    font-size: 0.85rem;
+    color: var(--v-escuro);
+}
+
+.perfil-corpo {
+    padding: 24px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-1 {
+    font-size: 15px;
+    color: #666;
+}
+
+.info-2 {
+    font-size: 15px;
+    color: var(--v-escuro);
+    font-weight: 600;
+}
+
+.botao {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    background: var(--verde-claro);
+    color: var(--creme);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background: var(--v-semi);
+}
