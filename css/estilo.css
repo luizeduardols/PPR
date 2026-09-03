@@ -204,16 +204,9 @@ form {
     display: inline-block;
 }
 
-<<<<<<< HEAD
 .d-dropdown div {
     display: flex;
     align-items: center;
-=======
-.d-dropdown summary {
-    display: flex;
-    align-items: center;
-    gap: 10px;
->>>>>>> 6b2a9eb5daa19752d08885eee492d93fb2d8f64c
     background: var(--v-escuro);
     color: var(--creme);
     border: none;
@@ -224,11 +217,6 @@ form {
 }
 
 .d-menu {
-<<<<<<< HEAD
-=======
-    position: absolute;
-    top: calc(100% + 8px);
->>>>>>> 6b2a9eb5daa19752d08885eee492d93fb2d8f64c
     left: 0;
     min-width: 200px;
     background: var(--fundo);
@@ -248,11 +236,7 @@ form {
     border-radius: 6px;
     text-decoration: none;
     color: var(--texto-p);
-<<<<<<< HEAD
     font-size: 15px;
-=======
-    font-size: 0.92rem;
->>>>>>> 6b2a9eb5daa19752d08885eee492d93fb2d8f64c
 }
 
 .d-menu li a:hover {
@@ -307,20 +291,12 @@ form {
 }
 
 .perfil-nome {
-<<<<<<< HEAD
     font-size: 15px;
-=======
-    font-size: 1.15rem;
->>>>>>> 6b2a9eb5daa19752d08885eee492d93fb2d8f64c
     font-weight: 600;
 }
 
 .perfil-email {
-<<<<<<< HEAD
     font-size: 15px;
-=======
-    font-size: 0.85rem;
->>>>>>> 6b2a9eb5daa19752d08885eee492d93fb2d8f64c
     color: var(--v-escuro);
 }
 
@@ -349,17 +325,9 @@ form {
 
 .botao {
     display: block;
-<<<<<<< HEAD
     margin-top: 20px;
     background: var(--verde-claro);
     color: var(--creme);
-=======
-    width: 100%;
-    margin-top: 20px;
-    background: var(--verde-claro);
-    color: var(--creme);
-    border: none;
->>>>>>> 6b2a9eb5daa19752d08885eee492d93fb2d8f64c
     padding: 12px;
     border-radius: 8px;
     font-size: 15px;
