@@ -221,7 +221,7 @@ form {
     min-width: 200px;
     background: var(--fundo);
     border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(27, 67, 50, 0.18);
+    box-shadow: 0 8px 24px #1b43322e;
     list-style: none;
     margin: 0;
     padding: 6px;
@@ -285,7 +285,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
+    font-size: 25px;
     font-weight: 600;
     color: var(--v-escuro);
 }
