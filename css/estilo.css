@@ -7,10 +7,10 @@
     --texto-p: #20281E;
     --texto-outro: #2D332F;
     --texto-outro2: #5B6355;
-    --verde-claro: #40916c;
-    --v-semi: #1E4A34;
-    --v-escuro: #1A3621;
-    --verde-outro: #233327;
+    --verde-claro: #95d5b2;
+    --v-semi: #40916c;
+    --v-escuro: #2d6a4f;
+    --verde-outro: #1b4332;
     --azul: #2E5FA3;
     --vermelho: #B23B2E;
     --amarelo: #e7df4b;
@@ -20,25 +20,26 @@
 
 /* Página de Login */
 body {
+    margin: 0;
     display: flex;
     background-color: var(--papel-claro);
     font-family: 'Google Sans Flex';
-    margin: 0px;
+    min-height: 100vh;
 }
 
-#b-index {
-    margin: 0px;
-}
-
-main {
+main{
     margin: auto;
 }
 
 #p-lateral {
-    background-color: var(--v-semi);
-    color: white;
-    width: 637px;
-    height: 948px;
+    width: 80vh;
+    min-height:100vh;
+    background:var(--verde-outro);
+    color:var(--papel-claro);
+    display:flex;
+    flex-direction:column;
+    padding:24px 0;
+    flex-shrink:1;
 }
 
 #login-card {
@@ -47,7 +48,7 @@ main {
     background-color: var(--fundo);
     width: 400px;
     margin: auto;
-    box-shadow: 0px 0px 8px 0px var(--papel);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 input {
@@ -61,7 +62,7 @@ input {
 }
 
 .login-button {
-    background-color: var(--v-semi);
+    background-color: var(--verde-outro);
     color: var(--creme);
     height: 35px;
     width: 350px;
@@ -107,7 +108,7 @@ form {
 #d-lateral {
     width: 220px;
     min-height: 100vh;
-    background: var(--v-semi);
+    background: var(--verde-outro);
     color: var(--texto-claro);
     display: flex;
     flex-direction: column;
@@ -340,3 +341,10 @@ form {
     background: var(--v-semi);
 }
 
+.perfil > form{
+    align-items: center;
+}
+
+.perfil > h1 {
+    text-align: center;
+}
