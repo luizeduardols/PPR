@@ -1,29 +1,258 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPR - Login</title>
-    <link rel="stylesheet" href="css/estilo.css">
+<meta charset="UTF-8">
+<title>Início - Pontos por reciclagem</title>
+<style>
+   :root{
+    --verde-900:#1b4332;
+    --verde-700:#2d6a4f;
+    --verde-500:#40916c;
+    --verde-300:#95d5b2;
+    --areia:#f6f5f0;
+    --texto-claro:#e9f5ee;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    font-family:'Segoe UI', system-ui, sans-serif;
+    background:var(--areia);
+    display:flex;
+    min-height:100vh;
+  }
+
+  /* Menu lateral */
+  #d-lateral{
+    width:220px;
+    min-height:100vh;
+    background:var(--verde-900);
+    color:var(--texto-claro);
+    display:flex;
+    flex-direction:column;
+    padding:24px 0;
+    flex-shrink:0;
+  }
+
+  #principal{
+    font-size:1.1rem;
+    font-weight:600;
+    color:var(--verde-300);
+    padding:0 24px 24px;
+    border-bottom:1px solid var(--verde-700);
+    margin-bottom:16px;
+    line-height:1.3;
+  }
+
+  #d-lateral nav{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+  }
+
+  #d-lateral nav a{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:12px 24px;
+    text-decoration:none;
+    color:var(--texto-claro);
+    border-left:3px solid transparent;
+  }
+
+  #d-lateral nav a:hover{
+    background:var(--verde-700);
+    border-left-color:var(--verde-300);
+  }
+
+  #d-lateral nav a.ativo{
+    background:var(--verde-500);
+    border-left-color:var(--verde-300);
+    font-weight:600;
+  }
+
+  .icone{
+    width:22px;
+    height:22px;
+    filter:brightness(0) invert(1);
+    flex-shrink:0;
+  }
+
+  /* Conteúdo */
+  #d-conteudo{
+    flex:1;
+    padding:40px;
+  }
+
+  #d-boasvindas{
+    margin-bottom:32px;
+  }
+
+  #d-boasvindas h1{
+    color:var(--verde-900);
+    margin:0 0 6px;
+  }
+
+  #d-boasvindas p{
+    color:#666;
+    margin:0;
+  }
+
+  #d-cartoes{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  .cartao{
+    background:#ffffff;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(27,67,50,0.10);
+    padding:20px;
+    min-width:180px;
+    flex:1;
+  }
+
+  .cartao-rotulo{
+    font-size:0.85rem;
+    color:#666;
+  }
+
+  .cartao-valor{
+    font-size:1.6rem;
+    font-weight:700;
+    color:var(--verde-900);
+    margin-top:6px;
+  }
+
+  /* Notícias */
+  #d-noticias{
+    margin-top:40px;
+  }
+
+  #d-noticias h2{
+    color:var(--verde-900);
+    font-size:1.2rem;
+    margin:0 0 16px;
+  }
+
+  #d-lista-noticias{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .noticia{
+    background:#ffffff;
+    border-radius:12px;
+    box-shadow:0 8px 24px rgba(27,67,50,0.10);
+    padding:20px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+
+  .noticia-icone{
+    width:44px;
+    height:44px;
+    border-radius:8px;
+    background:var(--verde-300);
+    flex-shrink:0;
+  }
+
+  .noticia-data{
+    font-size:0.78rem;
+    color:#999;
+  }
+
+  .noticia-titulo{
+    font-size:0.98rem;
+    font-weight:600;
+    color:var(--verde-900);
+    margin:4px 0 4px;
+  }
+
+  .noticia-texto{
+    font-size:0.88rem;
+    color:#666;
+    margin:0;
+  }
+</style>
 </head>
-<body id="b-index">
-    <header id="p-lateral">
-        <h1 class="texto">Login - Pontos por Reciclagem</h1><br><span class="texto">Entregue garrafas pets, orgânicos, vidro, papeis ou eletrônicos em nossas redes. Esses materiais viram pontos e podem ser usados para conceder benefícios</span>
-    </header>
-    <main>
-        <section id="login-card">
-             <h2>Entrar na sua conta</h2>
-            <form class="texto-card">E-mail<br><input type="text" placeholder="exemplo@dominio.com"></form>
-            <form class="texto-card">Senha<br><input type="password" placeholder="Digite sua senha"></form>
-            <div class="chk-box"><input class="box" type="checkbox"><span>Manter conectado?</span></div>
-                <a href="dashboard.html"><button class="login-button" type="submit">Entrar</button></a>
-                <span class="texto-rdp">Esqueceu a senha? <a href="#">Clique aqui.</a></span><br>
-                <span class="texto-rdp">Ainda não é cadastrado? <a href="#">Cadastre-se!</a></span>
-        </section>
-    </main>
-    <footer>
-    </footer>
-    <script src="js/login.js">
-    </script>
+<body>
+
+<section id="d-lateral">
+  <span id="principal">Pontos por reciclagem</span>
+  <nav>
+    <a href="index.html" class="ativo">
+      <img class="icone" src="img/home.png" alt="">
+      Início
+    </a>
+    <a href="historico.html">
+      <img class="icone" src="img/historico.png" alt="">
+      Histórico
+    </a>
+    <a href="perfil.html">
+      <img class="icone" src="img/perfil.png" alt="">
+      Perfil
+    </a>
+  </nav>
+</section>
+
+<section id="d-conteudo">
+  <div id="d-boasvindas">
+    <h1>Olá, Maria Clara</h1>
+    <p>Confira o resumo da sua reciclagem.</p>
+  </div>
+
+  <div id="d-cartoes">
+    <div class="cartao">
+      <div class="cartao-rotulo">Pontos acumulados</div>
+      <div class="cartao-valor">1.240 pts</div>
+    </div>
+    <div class="cartao">
+      <div class="cartao-rotulo">Itens reciclados</div>
+      <div class="cartao-valor">37</div>
+    </div>
+    <div class="cartao">
+      <div class="cartao-rotulo">Membro desde</div>
+      <div class="cartao-valor">Mar/2025</div>
+    </div>
+  </div>
+
+  <div id="d-noticias">
+    <h2>Notícias</h2>
+    <div id="d-lista-noticias">
+      <div class="noticia">
+        <div class="noticia-icone"></div>
+        <div>
+          <div class="noticia-data">28 de agosto de 2026</div>
+          <div class="noticia-titulo">Novo ponto de coleta aberto no bairro</div>
+          <p class="noticia-texto">Agora fica mais fácil entregar seus recicláveis perto de casa.</p>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="noticia-icone"></div>
+        <div>
+          <div class="noticia-data">20 de agosto de 2026</div>
+          <div class="noticia-titulo">Campanha de troca de pontos por brindes</div>
+          <p class="noticia-texto">Confira os novos itens disponíveis para resgate com seus pontos.</p>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="noticia-icone"></div>
+        <div>
+          <div class="noticia-data">10 de agosto de 2026</div>
+          <div class="noticia-titulo">Dicas para separar melhor seu lixo reciclável</div>
+          <p class="noticia-texto">Pequenos cuidados que aumentam a qualidade da reciclagem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
