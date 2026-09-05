@@ -30,13 +30,17 @@
     </header>
     <main>
         <section id="login-card">
-            <h2>Entrar na sua conta</h2>
-            <form class="texto-card">E-mail<br><input type="text" placeholder="exemplo@dominio.com"></form>
-            <form class="texto-card">Senha<br><input type="password" placeholder="Digite sua senha"></form>
-            <div class="chk-box"><input class="box" type="checkbox"><span>Manter conectado?</span></div>
-            <a href="dashboard.html"><button class="login-button" type="submit">Entrar</button></a>
-            <span class="texto-rdp">Esqueceu a senha? <a href="#">Clique aqui.</a></span><br>
-            <span class="texto-rdp">Ainda não é cadastrado? <a href="#">Cadastre-se!</a></span>
+            <h2 class="login-t">Entrar na sua conta</h2>
+            <form action="dashboard.html">
+                <label for="usuario">Usuário</label>
+                <input type="text" placeholder="Digite seu e-mail" required>
+                <label for="senha">Senha</label>
+                <input type="password" placeholder="Digite sua senha" required>
+                <div><input class="chk-box" type="checkbox"><span class="tmc">Manter conectado?</span></div>
+                <input class="login-button" type="submit">
+                <p>Esqueceu sua senha? Clique aqui</p>
+                <p>Ainda não é cadastrado? Clique aqui</p>
+            </form>
         </section>
     </main>
     <footer>

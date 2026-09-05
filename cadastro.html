@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <section class="perfil">
+    <section id="card-cad">
         <h1>Faça seu cadastro</h1>
         <form action="perfil.html">
-            <span>Nome completo</span>
+            <label for="nome">Nome completo</label>
             <input type="text" required>
-            <span>Data de nascimento</span>
+            <label for="data-nsc">Data de Nascimento</label>
             <input type="date"><br>
-            <span>E-mail</span>
+            <label for="email">E-mail</label>
             <input type="text" placeholder="email@exemplo.com" required>
             <span>Senha</span>
             <input type="password" placeholder="Digite sua senha" required>
             <input type="password" placeholder="Repita a senha" required>
-            <button>Concluir</button>
+            <input type="submit" value="submit">
         </form>
     </section>
     

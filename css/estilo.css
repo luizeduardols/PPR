@@ -6,7 +6,7 @@
     --fundo: #FBF8EE;
     --texto-p: #20281E;
     --texto-outro: #2D332F;
-    --texto-outro2: #5B6355;
+    --texto-outro2: #666666;
     --verde-claro: #95d5b2;
     --v-semi: #40916c;
     --v-escuro: #2d6a4f;
@@ -18,28 +18,57 @@
     --creme: #F5F3E7;
 }
 
-/* Página de Login */
 body {
     margin: 0;
     display: flex;
     background-color: var(--papel-claro);
     font-family: 'Google Sans Flex';
     min-height: 100vh;
+
+    background-color: var(--papel-claro);
+    background-image:
+        radial-gradient(var(--papel) 1px, transparent 1px),
+        radial-gradient(var(--papel) 1px, transparent 1px),
+        repeating-linear-gradient(135deg,
+            var(--papel) 0px,
+            transparent 1px,
+            transparent 3px),
+        repeating-linear-gradient(45deg,
+            var(--papel) 0px,
+            transparent 1px,
+            transparent 4px);
+
+    background-size:
+        18px 18px,
+        26px 26px,
+        auto,
+        auto;
+
+    background-position:
+        0 0,
+        9px 13px,
+        0 0,
+        0 0;
 }
 
-main{
+/* Página de Login */
+main {
     margin: auto;
 }
 
 #p-lateral {
-    width: 80vh;
-    min-height:100vh;
-    background:var(--verde-outro);
-    color:var(--papel-claro);
-    display:flex;
-    flex-direction:column;
-    padding:24px 0;
-    flex-shrink:1;
+    width: 70vh;
+    max-height: 100vh;
+    background: var(--verde-outro);
+    color: var(--papel-claro);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0;
+    flex-shrink: 1;
+}
+
+.login-t {
+    color: var(--texto-outro2);
 }
 
 #login-card {
@@ -52,17 +81,19 @@ main{
 }
 
 input {
-    background-color: var(--papel-claro);
+    background-color: var(--fundo);
     border: 2px solid;
     border-radius: 6px;
     border-color: var(--papel);
     height: 35px;
     width: 350px;
     box-sizing: border-box;
+    margin-bottom: 15px;
+    accent-color: var(--v-semi);
 }
 
 .login-button {
-    background-color: var(--verde-outro);
+    background-color: var(--v-escuro);
     color: var(--creme);
     height: 35px;
     width: 350px;
@@ -70,9 +101,6 @@ input {
     margin-bottom: 15px;
 }
 
-.texto {
-    color: var(--fundo);
-}
 
 form {
     text-align: left;
@@ -80,17 +108,29 @@ form {
     padding: 5px;
 }
 
-.chk-box {
-    display: flex;
-    margin: 20px;
+form>label {
+    color: var(--texto-outro2);
 }
 
-.box {
+form>div {
+    display: flex;
+    gap: 5px;
+}
+
+form>p {
+    margin: 0px;
+    text-align: center;
+}
+
+.chk-box {
+    display: flex;
     height: 20px;
     width: 20px;
-    margin: 0px;
-    margin-left: 7px;
-    margin-right: 10px;
+}
+
+.tmc {
+    padding-top: 4px;
+
 }
 
 .texto-rdp {
@@ -341,10 +381,25 @@ form {
     background: var(--v-semi);
 }
 
-.perfil > form{
+.perfil>form {
     align-items: center;
 }
 
-.perfil > h1 {
+.perfil>h1 {
+    text-align: center;
+}
+
+/* Cadastro */
+
+#card-cad {
+    background: var(--creme);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px #1b43321f;
+    width: 100%;
+    max-width: 420px;
+    overflow: hidden;
+}
+
+#card-cad>h1 {
     text-align: center;
 }
