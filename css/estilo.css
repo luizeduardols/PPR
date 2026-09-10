@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
     --papel: #DDD6BC;
@@ -16,36 +16,24 @@
     --amarelo: #e7df4b;
     --marrom: #7A5230;
     --creme: #F5F3E7;
+    --card-fundo: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
+    padding: 0;
     display: flex;
     background-color: var(--papel-claro);
-    font-family: 'Google Sans Flex';
+    font-family: 'Poppins';
     min-height: 100vh;
     background-color: var(--papel-claro);
-    background-image:
-        radial-gradient(var(--papel) 1px, transparent 1px),
-        radial-gradient(var(--papel) 1px, transparent 1px),
-        repeating-linear-gradient(135deg,
-            var(--papel) 0px,
-            transparent 1px,
-            transparent 3px),
-        repeating-linear-gradient(45deg,
-            var(--papel) 0px,
-            transparent 1px,
-            transparent 4px);
-    background-size:
-        18px 18px,
-        26px 26px,
-        auto,
-        auto;
-    background-position:
-        0 0,
-        9px 13px,
-        0 0,
-        0 0;
+    background-image: radial-gradient(var(--papel) 1px, transparent 1px), radial-gradient(var(--papel) 1px, transparent 1px), repeating-linear-gradient(135deg, var(--papel) 0px, transparent 1px, transparent 3px), repeating-linear-gradient(45deg, var(--papel) 0px, transparent 1px, transparent 4px);
+    background-size: 18px 18px, 26px 26px, auto, auto;
+    background-position: 0 0, 9px 13px, 0 0, 0 0;
 }
 
 /* Página de Login */
@@ -76,8 +64,8 @@ main {
     font-weight: 700;
     margin-left: 15px;
     display: inline-block;
-    animation: backInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: backInLeft;
+    animation-duration: 2s;
 }
 
 .res-lateral p {
@@ -106,12 +94,12 @@ main {
     font-size: 30px;
     display: inline-block;
     animation: backInLeft;
-    animation-duration: 2s; 
+    animation-duration: 2s;
     animation-delay: 1s;
 }
 
 .texto-painel .l {
-    font-size: 11.5px;
+    font-size: 13px;
     color: var(--papel-claro);
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -203,6 +191,8 @@ form>p {
 
 /* Dashboard */
 
+#dash {}
+
 #d-lateral {
     width: 220px;
     min-height: 100vh;
@@ -260,11 +250,6 @@ form>p {
     font-size: 15px;
 }
 
-#dash {
-    margin: 0px;
-    padding: 0px;
-}
-
 #tela-1 {
     display: flex;
     flex-wrap: wrap;
@@ -273,29 +258,230 @@ form>p {
     max-height: max-content;
 }
 
+.i-topo {
+    background-color: var(--card-fundo);
+    height: 10vh;
+    width: 100vw;
+    position: relative;
+    left: 0%;
+    transform: translateX(0%);
+
+}
+
+.info-icon{
+    height: 20px;
+}
+
 .interno-a {
-    background-color: var(--fundo);
-    height: 166px;
-    width: 455px;
-    margin: 50px;
+    background-color:var(--card-fundo);
+    height: 20vh;
+    width: 40vh;
+    margin: 2vh;
     border-radius: 2%;
+    text-align: center;
 }
 
 .interno-b {
-    background-color: var(--fundo);
+    background-color:var(--card-fundo);
     margin: 30px 80px 20px 50px;
-    height: 550px;
+    height: 50vh;
     width: 615px;
     border-radius: 2%;
+    text-align: center;
+}
+
+.interno-b .historico-resumo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 14px 0 14px;
+}
+
+.interno-b .resumo-item {
+    text-align: center;
+    background: #f4f4f0;
+    border: 1px solid #e0ded4;
+    border-radius: 10px;
+    padding: 10px 4px;
+}
+
+.interno-b .resumo-valor {
+    display: block;
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.interno-b .resumo-valor.resumo-negativo {
+    color: var(--vermelho);
+}
+
+.interno-b .resumo-label {
+    display: block;
+    font-size: 0.64rem;
+    color: var(--texto-outro2);
+    margin-top: 2px;
+    line-height: 1.3;
+}
+
+.interno-b .historico-filtros {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.interno-b .historico-filtros select {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 0.82rem;
+    background: #fff;
+}
+
+.interno-b .historico-lista {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.interno-b .historico-item {
+    border-bottom: 1px solid #eee;
+}
+
+.interno-b .historico-item:last-child {
+    border-bottom: none;
+}
+
+.interno-b .historico-linha {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.interno-b .historico-icone {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.interno-b .historico-icone.ganho {
+    background: var(--papel-claro);
+    color: var(--v-escuro);
+}
+
+.interno-b .historico-icone.resgate {
+    background: #f5e9d3;
+    color: #b98a2a;
+}
+
+.interno-b .historico-corpo {
+    flex: 1;
+}
+
+.interno-b .historico-desc {
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.interno-b .historico-data {
+    font-size: 0.72rem;
+    color: var(--texto-outro2);
+    margin-top: 2px;
+}
+
+.interno-b .historico-saldo {
+    font-size: 0.68rem;
+    color: var(--texto-outro2);
+    margin-top: 2px;
+}
+
+.interno-b .historico-pontos {
+    font-weight: 600;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.interno-b .historico-pontos.positivo {
+    color: var(--verde-outro);
+}
+
+.interno-b .historico-pontos.negativo {
+    color: var(--vermelho);
+}
+
+.interno-b .historico-seta {
+    font-size: 0.7rem;
+    color: var(--texto-outro2);
+    margin-left: 4px;
+    transition: transform 0.15s ease;
+}
+
+.interno-b .historico-item.aberto .historico-seta {
+    transform: rotate(180deg);
+}
+
+.interno-b .historico-detalhes {
+    display: none;
+    padding: 0 0 14px 44px;
+    font-size: 0.78rem;
+    color: #555;
+}
+
+.interno-b .historico-item.aberto .historico-detalhes {
+    display: block;
+}
+
+.interno-b .historico-detalhes dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 10px;
+    margin: 0;
+}
+
+.interno-b .historico-detalhes dt {
+    color: #888;
+}
+
+.interno-b .historico-detalhes dd {
+    margin: 0;
+    font-weight: 500;
+}
+
+.interno-b .historico-acoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.interno-b .historico-acoes button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.interno-b .historico-vazio {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    padding: 16px 0;
 }
 
 .interno-c {
     background-color: var(--fundo);
     margin: 30px 80px 0px 0px;
-    height: 400px;
+    height: 40vh;
     width: 456px;
     border-radius: 2%;
-
 }
 
 .d-dropdown {
@@ -358,7 +544,7 @@ form>p {
 /* Perfil */
 
 .perfil {
-    background: var(--creme);
+    background: var(--card-fundo);
     border-radius: 12px;
     box-shadow: 0 8px 24px #1b43321f;
     width: 100%;
@@ -367,7 +553,7 @@ form>p {
 }
 
 .perfil-topo {
-    background: var(--verde-900);
+    background: var(--verde-claro);
     color: var(--texto-claro);
     padding: 32px 24px;
     display: flex;
@@ -380,13 +566,13 @@ form>p {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: var(--verde-claro);
+    background: var(--v-semi);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
     font-weight: 600;
-    color: var(--v-escuro);
+    color: var(--texto-outro);
 }
 
 .perfil-nome {
@@ -396,7 +582,7 @@ form>p {
 
 .perfil-email {
     font-size: 15px;
-    color: var(--v-escuro);
+    color: var(--texto-outro);
 }
 
 .perfil-corpo {
@@ -413,7 +599,7 @@ form>p {
 
 .info-1 {
     font-size: 15px;
-    color: #666;
+    color: var(--texto-outro2);
 }
 
 .info-2 {
@@ -425,7 +611,7 @@ form>p {
 .botao {
     display: block;
     margin-top: 20px;
-    background: var(--verde-claro);
+    background: var(--v-semi);
     color: var(--creme);
     padding: 12px;
     border-radius: 8px;
@@ -464,4 +650,136 @@ form>p {
 
 #card-cad>h1 {
     text-align: center;
+}
+
+/* Index */
+
+#d-conteudo {
+    flex: 1;
+    padding: 40px;
+}
+
+#d-boasvindas {
+    margin-bottom: 32px;
+}
+
+#d-boasvindas h1 {
+    color: var(--verde-outro);
+    margin: 0 0 6px;
+}
+
+#d-boasvindas p {
+    color: var(--texto-outro2);
+    margin: 0;
+}
+
+#d-cartoes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cartao {
+    background: var(--card-fundo);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(27, 67, 50, 0.10);
+    padding: 20px;
+    min-width: 180px;
+    flex: 1;
+}
+
+.cartao-rotulo {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.cartao-valor {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--verde-outro);
+    margin-top: 6px;
+}
+
+#d-noticias {
+    margin-top: 40px;
+}
+
+#d-noticias h2 {
+    color: var(--verde-outro);
+    font-size: 1.2rem;
+    margin: 0 0 16px;
+}
+
+#d-lista-noticias {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.noticia {
+    background: var(--card-fundo);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(27, 67, 50, 0.10);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.noticia-icone {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.noticia-icone > img{
+    height: 44px;
+}
+
+.noticia-data {
+    font-size: 0.78rem;
+    color: var(--texto-outro2);
+}
+
+.noticia-titulo {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--verde-outro);
+    margin: 4px 0 4px;
+}
+
+.noticia-texto {
+    font-size: 0.88rem;
+    color: var(--texto-outro2);
+    margin: 0;
+}
+
+/* Contato */
+
+.content {
+    min-height: 100vh;
+    width: 200vh;
+    
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #20281E;
+}
+
+.card {
+    background-color: var(--card-fundo);
+    border: none;
+    border-radius: 12px;
 }

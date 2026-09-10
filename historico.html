@@ -5,29 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histórico</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
-    <h1 id="titulo">Este é meu título</h1>
-    <script>
+    <section id="d-lateral">
+        <span id="principal">Pontos por reciclagem</span>
+         <nav>
+            <a href="index.html" class="ativo">
+                <img class="icone" src="img/inicio.svg">
+                <span class="s-txt">Início</span>
+            </a>
+             <a href="dashboard.html" class="ativo">
+                <img class="icone" src="img/dashboard.svg">
+                <span class="s-txt">Dashboard</span>
+            </a>
+             <a href="beneficio.html" class="ativo">
+                <img class="icone" src="img/ticket.svg">
+                <span class="s-txt">Benefícios</span>
+            </a>
+            <a href="historico.html">
+                <img class="icone" src="img/historico.svg">
+                <span class="s-txt">Histórico</span>
+            </a>
+            <a href="perfil.html">
+                <img class="icone" src="img/perfil.svg">
+                <span class="s-txt">Perfil</span>
+            </a>
+            <a href="sobre.html">
+                <img class="icone" src="img/sobre.svg">
+                <span class="s-txt">Sobre</span>
+            </a>
+        </nav>
+    </section>
+    <div class="interno-b">
+    <p>Histórico</p>
 
-        //var nome = window.prompt("Ditigite seu nome:")
-        //var n1 = Number(window.prompt("Digite um número: "))
+    <div class="historico-resumo">
+        <div class="resumo-item">
+            <span class="resumo-valor" id="resumo-ganho">+0</span>
+            <span class="resumo-label">pontos ganhos</span>
+        </div>
+        <div class="resumo-item">
+            <span class="resumo-valor resumo-negativo" id="resumo-resgatado">−0</span>
+            <span class="resumo-label">pontos gastos</span>
+        </div>
+        <div class="resumo-item">
+            <span class="resumo-valor" id="resumo-itens">0</span>
+            <span class="resumo-label">itens entregues</span>
+        </div>
+        <div class="resumo-item">
+            <span class="resumo-valor" id="resumo-saldo">0</span>
+            <span class="resumo-label">saldo atual</span>
+        </div>
+    </div>
 
-        //document.write(`Olá seu nome é ${nome.toUpperCase()}`)
-        //document.write(`Seu número é: ${n1.toLocaleString('pt-br', {style:"currency", currency: 'BRL'})}`)
+    <div class="historico-filtros">
+        <select id="filtro-tipo">
+            <option value="todos">Todas as movimentações</option>
+            <option value="ganho">Somente ganhos</option>
+            <option value="resgate">Somente resgates</option>
+        </select>
+        <select id="filtro-periodo">
+            <option value="todos">Qualquer período</option>
+            <option value="7">Últimos 7 dias</option>
+            <option value="30">Últimos 30 dias</option>
+            <option value="mes">Este mês</option>
+        </select>
+    </div>
 
-        //document.write(`Seu número é: ${n1.toFixed(2).replace('.', ',')}`)
-        //Comando usando template string com atributo para char maiúsculu
-        // + pode ser usado para adição desde que ambas as variáveis seja do tipo numeber
-        // + pode ser usado para concatenação   
+    <div class="historico-lista" id="historico-lista">
+        <!-- itens renderizados via JS -->
+    </div>
 
-        //var p1 = window.document.getElementsByTagName('h1')[0]
-        //window.document.write('O que está dentro de de P1: '+p1.innerText)
-
-        var t = document.querySelector('h1#titulo')
-        t.style.background = 'red'
-    </script>
+    <div class="historico-acoes">
+        <button type="button" id="btn-registrar-entrega">Registrar entrega</button>
+        <button type="button" id="btn-resgatar-pontos">Resgatar pontos</button>
+    </div>
+    </div>
+    <script src="js/historico.js"></script>
 </body>
-
 </html>
