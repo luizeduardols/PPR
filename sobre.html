@@ -1,134 +1,87 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato | Pontos por Lixo</title>
-    <link rel="stylesheet" href="css/estilo.css" />
-  </head>
 
-  <body>
-    <section id="d-lateral">
-      <span id="principal">Pontos por reciclagem</span>
-      <nav>
-        <a href="index.html" class="ativo">
-          <img class="icone" src="img/inicio.svg" />
-          <span class="s-txt">Início</span>
-        </a>
-        <a href="dashboard.html" class="ativo">
-          <img class="icone" src="img/dashboard.svg" />
-          <span class="s-txt">Dashboard</span>
-        </a>
-        <a href="beneficio.html" class="ativo">
-          <img class="icone" src="img/ticket.svg" />
-          <span class="s-txt">Benefícios</span>
-        </a>
-        <a href="historico.html">
-          <img class="icone" src="img/historico.svg" />
-          <span class="s-txt">Histórico</span>
-        </a>
-        <a href="perfil.html">
-          <img class="icone" src="img/perfil.svg" />
-          <span class="s-txt">Perfil</span>
-        </a>
-        <a href="sobre.html">
-          <img class="icone" src="img/sobre.svg" />
-          <span class="s-txt">Sobre</span>
-        </a>
-      </nav>
-    </section>
-    <main class="content">
-      <div class="container py-5">
-        <div class="mb-5">
-          <h1>Entre em contato</h1>
-          <p class="text-muted">
-            Tem alguma dúvida, sugestão ou problema? Envie uma mensagem para
-            nossa equipe.
-          </p>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-7">
-            <div class="card p-4">
-              <h2 class="mb-4">Envie uma mensagem</h2>
-              <form id="contactForm">
-                <div class="mb-3">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nome"
-                    placeholder="Digite seu nome"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="seuemail@email.com" required/>
-                </div>
-                <div class="mb-3">
-                  <label for="assunto" class="form-label">Assunto</label>
-                  <select class="form-select" id="assunto" required>
-                    <option value="" selected disabled>
-                      Selecione um assunto
-                    </option>
-                    <option value="duvida">Dúvida</option>
-                    <option value="problema">Problema</option>
-                    <option value="sugestao">Sugestão</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                </div>
-                <div class="mb-4">
-                  <label for="mensagem" class="form-label">Mensagem</label>
-                  <textarea class="form-control" id="mensagem"rows="6"
-                    placeholder="Digite sua mensagem..."
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-success w-100">
-                  Enviar mensagem
-                </button>
-              </form>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="card p-4">
-              <h2 class="mb-4">Fale conosco</h2>
-              <div class="contact-item d-flex align-items-center gap-3 mb-4">
-                <div class="contact-icon">📧</div>
-                <div>
-                  <h5 class="mb-1">E-mail</h5>
-                  <p class="text-muted mb-0">contato@pontosporlixo.com</p>
-                </div>
-              </div>
-              <div class="contact-item d-flex align-items-center gap-3 mb-4">
-                <div class="contact-icon">📞</div>
-                <div>
-                  <h5 class="mb-1">Telefone</h5>
-                  <p class="text-muted mb-0">(00) 00000-0000</p>
-                </div>
-              </div>
-              <div class="contact-item d-flex align-items-center gap-3 mb-4">
-                <div class="contact-icon">📍</div>
-                <div>
-                  <h5 class="mb-1">Localização</h5>
-                  <p class="text-muted mb-0">Recife - PE</p>
-                </div>
-              </div>
-              <hr />
-              <h5 class="mt-3">Horário de atendimento</h5>
-              <p class="text-muted">
-                Segunda a sexta-feira<br />08:00 às 18:00
-              </p>
-            </div>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre | Pontos por Reciclagem</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+  <section id="d-lateral">
+    <span id="principal">Pontos por reciclagem</span>
+    <nav>
+      <a href="index.html"><img class="icone" src="img/inicio.svg" alt="" /><span class="s-txt">Início</span></a>
+      <a href="dashboard.html"><img class="icone" src="img/dashboard.svg" alt="" /><span
+          class="s-txt">Dashboard</span></a>
+      <a href="beneficio.html"><img class="icone" src="img/ticket.svg" alt="" /><span
+          class="s-txt">Benefícios</span></a>
+      <a href="historico.html"><img class="icone" src="img/historico.svg" alt="" /><span
+          class="s-txt">Histórico</span></a>
+      <a href="perfil.html"><img class="icone" src="img/perfil.svg" alt="" /><span class="s-txt">Perfil</span></a>
+      <a href="sobre.html" class="ativo"><img class="icone" src="img/sobre.svg" alt="" /><span
+          class="s-txt">Sobre</span></a>
+      <a href="contato.html"><img class="icone" src="img/contato.svg" alt="" /><span class="s-txt">Contato</span></a>
+    </nav>
+    <details class="menu-usuario">
+      <summary>
+        <span class="avatar-menu" aria-hidden="true">MC</span>
+        <span class="usuario-dados"><strong>Maria Clara</strong><small>maria.clara@email.com</small></span>
+      </summary>
+      <div class="submenu-usuario">
+        <a href="perfil.html">Meu perfil</a>
+        <a href="login.html">Sair</a>
       </div>
-    </main>
-    <footer></footer>
-  </body>
+    </details>
+  </section>
+
+  <main class="conteudo-pagina">
+    <div class="conteiner-pagina pagina-sobre">
+      <header class="sobre-cabecalho">
+        <p class="sobre-selo">Pontos por Reciclagem</p>
+        <h1>Reciclar hoje para transformar o amanhã.</h1>
+        <p class="texto-secundario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptate vel
+          quibusdam magnam voluptates delectus, nemo repellendus minima culpa id.</p>
+      </header>
+
+      <section class="cartao-pagina sobre-destaque">
+        <h2>Nosso propósito</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum veritatis, ducimus blanditiis ipsam cumque
+          velit, expedita enim qui nostrum iste dolorum ipsa mollitia incidunt similique perspiciatis voluptate.
+          Mollitia, libero commodi?</p>
+      </section>
+
+      <section class="sobre-grade" aria-label="Como o projeto funciona">
+        <article class="cartao-pagina sobre-etapa">
+          <span class="sobre-numero">1</span>
+          <h2>Separe</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis.</p>
+        </article>
+        <article class="cartao-pagina sobre-etapa">
+          <span class="sobre-numero">2</span>
+          <h2>Entregue</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+        <article class="cartao-pagina sobre-etapa">
+          <span class="sobre-numero">3</span>
+          <h2>Aproveite</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+      </section>
+
+      <section class="sobre-valores">
+        <article class="cartao-pagina">
+          <h2>Impacto local</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+        <article class="cartao-pagina">
+          <h2>Transparência</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate perferendis</p>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+
 </html>
-```
