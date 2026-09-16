@@ -588,24 +588,27 @@ form>p {
 
 .prin-cad {
     display: flex;
+    margin: auto;
 }
 
 #card-cad {
     background-color: var(--card-fundo);
+    border-radius: 12px;
+    
 }
 
 #card-cad>h1 {
-     font-size: 1.45rem
+    font-size: 1.45rem;
+    text-align: center;
 }
 
 #card-cad form {
     display: grid;
     gap: 7px;
-    margin: 0
+    margin: 20px;
 }
 
 /* Index */
-
 #d-conteudo {
     flex: 1;
     padding: 40px;
